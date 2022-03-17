@@ -16,5 +16,6 @@
 #     if word_r == word_r[::-1]:
 #         polydromes.append(word)
 # print(polydromes)
-print(list(range(1,10)))
-
+# l1 = list(range(1,10))
+# s = '~'.join(map(str, l1))
+# print(s)
