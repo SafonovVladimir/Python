@@ -9,11 +9,12 @@
 #     if i != i[::-1]:
 #         words.remove(i)
 # print([i for i in words if i == i[::-1]])
-my_lst = ['Око за око', 'Около Миши молоко', 'А роза упала на лапу Азора']
-polydromes = []
-for word in my_lst:
-    word_r = word.replace(' ', '').lower()
-    if word_r == word_r[::-1]:
-        polydromes.append(word)
-print(polydromes)
+# my_lst = ['Око за око', 'Около Миши молоко', 'А роза упала на лапу Азора']
+# polydromes = []
+# for word in my_lst:
+#     word_r = word.replace(' ', '').lower()
+#     if word_r == word_r[::-1]:
+#         polydromes.append(word)
+# print(polydromes)
+print(list(range(1,10)))
 
