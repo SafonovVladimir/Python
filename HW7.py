@@ -1,4 +1,4 @@
-arr = [1, 2, 3, 'even', 4, 5, 44, 7, 'odd']
+# arr = [1, 2, 3, 'even', 4, 5, 44, 7, 'odd']
 
 
 def odd_ball(arr):
@@ -10,4 +10,6 @@ def odd_ball(arr):
     return x
 
 
-print(odd_ball(arr))
+print(odd_ball([1, 2, 3, 'even', 4, 5, 44, 7, 'odd']))
+print(odd_ball([1, 2, 3, 'even', 4, 5, 8, 7, 'odd']))
+print(odd_ball([1, 2, 3, 'even', 4, 5, 44, 7, 9,'odd']))
