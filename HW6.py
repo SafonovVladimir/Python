@@ -1,9 +1,8 @@
 def upper_lower_string(s):
     if ' ' in s:
-        s = s.upper()
+        return s.upper()
     else:
-        s = s.lower()
-    return s
+        return s.lower()
 
 
 s = input('Введіть будь-яку строку: ')
