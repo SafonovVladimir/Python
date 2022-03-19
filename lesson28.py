@@ -23,11 +23,21 @@ a = 5
 # f()
 # print(a)
 
-l = [1, 2, 3, 4, 5]
+l = [1, 2, 4, 5]
+
+
 # print([i * 2 for i in l])
 
-def f(l):
-    return [i * 2 for i in l]
+# def f(l):
+#     return [i * 2 for i in l]
+#
+# print(f(l))
 
-print(f(l))
+def get_mult(x):
+    return x * 2
 
+
+def f2(l):
+    return [get_mult(i) for i in l]
+
+print(f2(l))
