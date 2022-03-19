@@ -18,6 +18,8 @@
 # hello("Машаелакашу")
 
 def get_sum(a, b):
-    print(a + b)
+    return a + b
 
-get_sum(4, 6)
+
+c = get_sum(6, 8) + 10
+print(c)
