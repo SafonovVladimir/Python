@@ -5,5 +5,7 @@ def upper_lower_string(s):
         return s.lower()
 
 
-s = input('Введіть будь-яку строку: ')
-print(upper_lower_string(s))
+# s = input('Введіть будь-яку строку: ')
+print(upper_lower_string('sdfasdf gfjh'))
+print(upper_lower_string('sdFSsdf,gfjh'))
+print(upper_lower_string('sdfasdfgfjh'))
