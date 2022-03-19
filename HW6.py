@@ -9,3 +9,4 @@ def upper_lower_string(s):
 print(upper_lower_string('sdfasdf gfjh'))
 print(upper_lower_string('sdFSsdf,gfjh'))
 print(upper_lower_string('sdfasdfgfjh'))
+print()
