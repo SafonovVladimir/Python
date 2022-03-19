@@ -9,4 +9,7 @@ def mult_table():
 
 print("Таблиця множення:")
 mult_table()
+mult_table()
 print('Well Done!')
+
+
