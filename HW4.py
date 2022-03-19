@@ -17,7 +17,7 @@ def guess_num():
         else:
             print('Вы угадали')
             print(f'Количество попыток: {counter}')
-            answ = input('Хотите сыграть еще раз? y/n \n')
+            answ = input('Хотите сыграть еще раз? y|n \n')
             if answ == 'y':
                 guess_num()
             else:
