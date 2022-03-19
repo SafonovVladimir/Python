@@ -2,6 +2,7 @@
 
 
 def odd_ball(arr):
+    global x
     for i in arr:
         if arr.__contains__(arr.index('odd')):
             x = 'True'
