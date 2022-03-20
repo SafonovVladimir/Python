@@ -34,8 +34,8 @@ def create_file():
 
 
 def show_foder_tree():
-    #Водим стартовый путь
-    startpath = input('Enter the path for watching folder tree: ')
+    #Вводим стартовый путь
+    startpath = input('Enter the path for showing folder tree: ')
     for root, dirs, files in os.walk(startpath):
         #считаем количество директорий и файлов
         level = root.replace(startpath, '').count(os.sep)
