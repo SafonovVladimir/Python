@@ -1,15 +1,4 @@
 Строка 1
 Строка 2
-String 4
-String 4
-String 4String 11
-String12
-String 4
-String 11
-String12
-String 4
-String 11
-String 12
-String 4
-String 11
-String 12
+String New1
+String New2
