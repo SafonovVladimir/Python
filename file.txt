@@ -1,4 +1,15 @@
-String 1
-String 2
-String 3
-������
+Строка 1
+Строка 2
+String 4
+String 4
+String 4String 11
+String12
+String 4
+String 11
+String12
+String 4
+String 11
+String 12
+String 4
+String 11
+String 12
