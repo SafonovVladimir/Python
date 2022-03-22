@@ -1,4 +1,0 @@
-Строка 1
-Строка 2
-String New1
-String New2
