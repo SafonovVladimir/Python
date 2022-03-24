@@ -33,7 +33,7 @@ def create_file():
     # return filename
 
 
-def show_foder_tree():
+def show_folder_tree():
     #Вводим стартовый путь
     startpath = input('Enter the path for showing folder tree: ')
     for root, dirs, files in os.walk(startpath):
@@ -44,3 +44,4 @@ def show_foder_tree():
         subindent = ' ' * 4 * (level + 1)
         for f in files:
             print('{}{}'.format(subindent, f))
+
