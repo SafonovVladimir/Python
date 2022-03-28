@@ -42,13 +42,13 @@ root = Tk()
 #
 # bnt0 = Button(f, text='0', padx=10, pady=5).grid(row=3, column=1)
 
-l_user = Label(root, text='Login:').grid(row=0, column=0, padx=10, pady=10)
-e_user = Entry(root).grid(row=0, column=1, padx=10)
+l_user = Label(root, text='Login:').grid(row=0, column=0, padx=10, pady=10, sticky=W)
+e_user = Entry(root).grid(row=0, column=1, padx=10, columnspan=2, sticky=W+E)
 
-l_pass = Label(root, text='Password:').grid(row=1, column=0, padx=10)
-e_pass = Entry(root, show="*").grid(row=1, column=1, padx=10)
+l_pass = Label(root, text='Password:').grid(row=1, column=0, padx=10, sticky=W)
+e_pass = Entry(root, show="*").grid(row=1, column=1, padx=10, columnspan=2, sticky=W+E)
 
-bnt_Login = Button (root, text = 'Вход', padx=5).grid(row=2, column=0, pady=10)
+bnt_Login = Button (root, text = 'Вход', padx=5).grid(row=2, column=0, pady=10, padx=10, sticky=W)
 bnt_reg = Button (root, text = 'Регистрация', padx=5).grid(row=2, column=1, pady=10)
 bnt_forgot = Button (root, text = 'Забыли пароль', padx=5).grid(row=2, column=2, padx=10)
 
