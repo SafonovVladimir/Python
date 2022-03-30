@@ -1,6 +1,23 @@
 from tkinter import *
+import time
 
-root1 = Tk()
-root2 = Tk()
-root1.after(50, root1.mainloop)  # первый цикл запускаем в фоне
-root2.mainloop()
+
+def tick():
+    watch.after(100, tick)
+    watch['text'] = time.strftime('%H:%M:%S')
+
+
+# def tick():
+#     label.after(200, tick)
+#     label['text'] = time.strftime('%H:%M:%S')
+
+
+root = Tk()
+watch = Label(root, font="Arial 70")
+watch.pack()
+
+
+# label = Label(font='sans 20')
+# label.pack()
+watch.after_idle(tick)
+root.mainloop()
