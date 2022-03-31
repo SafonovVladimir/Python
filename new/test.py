@@ -1,11 +1,16 @@
-import unittest
+class Axe:
 
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+    def __init__(self, x: int, y: int):
+        self.x = x
+        self.y = y
 
 
 if __name__ == '__main__':
-    unittest.main()
+    axe = Axe(x=5, y=18)
+#
+print(axe.x)
+print(axe.y)
 
+del axe
+# print(axe.x)
+# print(axe.y)

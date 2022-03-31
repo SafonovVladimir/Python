@@ -1,19 +1,30 @@
-# from itertools import compress
+# def superset(set_1, set_2):
+#     print(set_1)
+#     print(set_2)
+#     if set_1 > set_2:
+#         print(f'Объект {set_1} является чистым супермножеством')
+#     elif set_1 == set_2:
+#         print(f'Множества равны')
+#     elif set_1 < set_2:
+#         print(f'Объект {set_2} является чистым супермножеством')
+#     else:
+#         print('Супермножество не обнаружено')
 #
-# letters = ['A', 'B', 'C', 'B', 'D']
-# mask = [1, 0, 1, 0, 0]
-#
-# result = list(compress(letters, mask))
-#
-# print(result)
+# superset("qwert", "qweru")
 
-str = 'run run go fast Forest'
-# print(str)
-s = set(str.split())
-# print(s)
-a = {}
-print(type(a))
-a = s
-print(type(a))
-a = {1, 2, 3}
-print(type(a))
+from time import perf_counter_ns
+
+MAX_VALUE = 20_000
+SEARCH_ITEM = 19_999_000
+
+
+def measure_time(data):
+    start = perf_counter_ns()
+    SEARCH_ITEM in data
+    return perf_counter_ns() - start
+
+st = set(range(1, MAX_VALUE))
+lst = list(range(1, MAX_VALUE))
+
+print(f'Set search time: {measure_time(st)}ns')
+print(f'List search time: {measure_time(lst)}ns')
