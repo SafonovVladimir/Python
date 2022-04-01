@@ -15,12 +15,18 @@
 # # print(axe.x)
 # # print(axe.y)
 
-dic = {}
-print(type(dic))
-tup = {'1', '2', '3', '4', '5'}
-print(type(tup))
-print(tup)
+# names = ['AAA', 'BBB', 'CCC']
+#
+# for i, names in enumerate(names):
+#     print(f'{i+1}: {names}')
 
+#
+# dic = {}
+# print(type(dic))
+# tup = {'1', '2', '3', '4', '5'}
+# print(type(tup))
+# print(tup)
+#
 text = 'World Hello New'
 print(text)
 
@@ -28,7 +34,7 @@ print(text)
 def rev(word):
     # new_word = ''.join(reversed(word))
     new_word = word[::-1]
-    return new_word.upper()
+    return new_word
 
 
 # my_list = list()
@@ -37,6 +43,9 @@ lst = list(text.split(" "))
 print(lst)
 
 result = []
+# for lst in enumerate(lst):
+#     result.append(rev(lst))
+#     print(lst)
 for i in lst:
     result.append(rev(i))
 
