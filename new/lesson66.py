@@ -6,7 +6,6 @@ def tick():
     watch.after(100, tick)
     watch['text'] = time.strftime('%H:%M:%S')
 
-
 # def tick():
 #     label.after(200, tick)
 #     label['text'] = time.strftime('%H:%M:%S')
