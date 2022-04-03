@@ -12,19 +12,30 @@
 #
 # superset("qwert", "qweru")
 
-from time import perf_counter_ns
+# from time import perf_counter_ns
+#
+# MAX_VALUE = 20_000
+# SEARCH_ITEM = 19_999_000
+#
+#
+# def measure_time(data):
+#     start = perf_counter_ns()
+#     SEARCH_ITEM in data
+#     return perf_counter_ns() - start
+#
+# st = set(range(1, MAX_VALUE))
+# lst = list(range(1, MAX_VALUE))
+#
+# print(f'Set search time: {measure_time(st)}ns')
+# print(f'List search time: {measure_time(lst)}ns')
 
-MAX_VALUE = 20_000
-SEARCH_ITEM = 19_999_000
 
+import random
 
-def measure_time(data):
-    start = perf_counter_ns()
-    SEARCH_ITEM in data
-    return perf_counter_ns() - start
+n = int(input())
+array = list()
 
-st = set(range(1, MAX_VALUE))
-lst = list(range(1, MAX_VALUE))
+for i in range(n):
+    array.append(random.randint(0, 20))
 
-print(f'Set search time: {measure_time(st)}ns')
-print(f'List search time: {measure_time(lst)}ns')
+print(array)
