@@ -1,0 +1,15 @@
+class New():
+    '''
+    Новий клас
+    '''
+
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return self.name
+
+
+new_obj = New('Володимир')
+
+print(new_obj)
