@@ -30,12 +30,24 @@
 # print(f'List search time: {measure_time(lst)}ns')
 
 
-import random
+# import random
+#
+# n = int(input('Введіть число: '))
+# array = list()
+#
+# for i in range(n):
+#     array.append(random.randint(0, 30))
+#
+# print(array)
 
-n = int(input())
-array = list()
+from progressbar import ProgressBar
+import time
 
-for i in range(n):
-    array.append(random.randint(0, 20))
+pbar = ProgressBar(maxval=5)
+pbar.start()
 
-print(array)
+for i in range(4):
+    pbar.update(i)
+    time.sleep(i)
+
+pbar.finish()
