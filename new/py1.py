@@ -110,12 +110,11 @@
 # main()
 
 
-
-number = 5
-even = True if number % 2 == 0 else False
-# even = number % 2 == 0
-# print("Code 3: even := {}".format(even))
-print("Code 2: even := {}".format(even))
+# number = 5
+# even = True if number % 2 == 0 else False
+# # even = number % 2 == 0
+# # print("Code 3: even := {}".format(even))
+# print("Code 2: even := {}".format(even))
 
 
 # def factorial(n):
@@ -211,3 +210,82 @@ print("Code 2: even := {}".format(even))
 #         index_of_max = i
 #
 # print(index_of_max)
+
+
+# def chain_sum(number):
+#     result = number
+#     def wrapper(number2=None):
+#         nonlocal result
+#         if number2 is None:
+#             return result
+#         result += number2
+#         return wrapper
+#     return wrapper
+
+# class chain_sum(int):
+#     def __call__(self, addition=0):
+#         return chain_sum(self + addition)
+#
+#
+# print(1 + chain_sum(5)())
+# print(1 + chain_sum(5)(2)())
+# print(1 + chain_sum(5)(100)(-10)())
+
+
+# def fibonacci(n):
+#     a, b = 0, 1
+#     for i in range(n):
+#         yield a
+#         a, b = b, a + b
+#
+# data = list(fibonacci(10))
+# print(data)
+
+# fib = lambda n: fib(n - 1) + fib(n - 2) if n > 2 else 1
+
+# def fib(n):
+#     a = 0
+#     print(a)
+#     b = 1
+#     for i in range(n):
+#         a, b = b, a + b
+#         print(a)
+#     return a
+#
+# fib(10)
+
+# def fib(n):
+#     if n <= 1:
+#         return n
+#     else:
+#         return fib(n-1) + fib(n-2)
+#
+# print(fib(7))
+
+# for i in range(1, 101):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print (f'{i} + FizzBuzz')
+#     elif i % 3 == 0:
+#         print (f'{i} + Fizz')
+#     elif i % 5 == 0:
+#         print (f'{i} + Buzz')
+#     else:
+#         print (str(i))
+
+A0 = dict(zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5)))
+print(f'A0 - {A0}')
+A1 = range(10)
+print(A1)
+A2 = sorted([i for i in A1 if i in A0])
+print(A2)
+A3 = sorted([A0[s] for s in A0])
+print(A3)
+A4 = [i for i in A1 if i in A3]
+print(A4)
+A5 = {i: i * i for i in A1}
+print(A5)
+A6 = [[i, i * i] for i in A1]
+print(A6)
+A7 = [i if i % 2 else 0 for i in A1 if 2 < i < 8]
+print(A7)
+print(','.join(str(j ** 2) for j in range(10)))
