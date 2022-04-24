@@ -271,21 +271,75 @@
 #         print (f'{i} + Buzz')
 #     else:
 #         print (str(i))
+#
+# A0 = dict(zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5)))
+# print(f'A0 - {A0}')
+# A1 = range(10)
+# print(A1)
+# A2 = sorted([i for i in A1 if i in A0])
+# print(A2)
+# A3 = sorted([A0[s] for s in A0])
+# print(A3)
+# A4 = [i for i in A1 if i in A3]
+# print(A4)
+# A5 = {i: i * i for i in A1}
+# print(A5)
+# A6 = [[i, i * i] for i in A1]
+# print(A6)
+# A7 = [i if i % 2 else 0 for i in A1 if 2 < i < 8]
+# print(A7)
+# print(','.join(str(j ** 2) for j in range(10)))
 
-A0 = dict(zip(('a', 'b', 'c', 'd', 'e'), (1, 2, 3, 4, 5)))
-print(f'A0 - {A0}')
-A1 = range(10)
-print(A1)
-A2 = sorted([i for i in A1 if i in A0])
-print(A2)
-A3 = sorted([A0[s] for s in A0])
-print(A3)
-A4 = [i for i in A1 if i in A3]
-print(A4)
-A5 = {i: i * i for i in A1}
-print(A5)
-A6 = [[i, i * i] for i in A1]
-print(A6)
-A7 = [i if i % 2 else 0 for i in A1 if 2 < i < 8]
-print(A7)
-print(','.join(str(j ** 2) for j in range(10)))
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# newlist = []
+#
+# for x in fruits:
+#   if "a" in x:
+#     newlist.append(x)
+#
+# print(newlist)
+
+# dictionary = [{'персона': 'человек',
+#               'марафон': 'гонка бегунов длиной около 26 миль',
+#               'противостоять': 'оставаться сильным, несмотря на давление',
+#               'бежать': 'двигаться со скоростью'}]
+#
+#
+# result = '; '.join([f' {value}' for key, value in dictionary[0].items()])
+#
+# print(result)
+
+# dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+# # Double each value in the dictionary
+# double_dict1 = {v for (k, v) in dict1.items()}
+# print(double_dict1)
+
+# def calculator(expression):
+#     allowed = '+-*/'
+#     if not any(sign in expression for sign in allowed):
+#         raise ValueError(f'Вираз повинен мати хочаб один знак ({allowed})')
+#     for sign in allowed:
+#         if sign in expression:
+#             try:
+#                 left, right = expression.split(sign)
+#                 left, right = int(left), int(right)
+#                 if sign == '+':
+#                     return left + right
+#                 elif sign == '-':
+#                     return left - right
+#                 elif sign == '*':
+#                     return left * right
+#                 else:
+#                     return left / right
+#             except (ValueError, TypeError):
+#                 raise ValueError('Вираз повинен мати 2 целих числа та один знак')
+#
+#
+# if __name__ == '__main__':
+#     print(calculator('2+2.5'))
+
+# array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# print(array[::-1][::2])
+
+my_dict = {'apples': 70, 'oranges': 80, 'bananas': 20, 'tomates': 30}
+print(sorted(my_dict, key=my_dict.get)[::-1])
