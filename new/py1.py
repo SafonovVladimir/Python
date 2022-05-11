@@ -341,5 +341,32 @@
 # array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # print(array[::-1][::2])
 
-my_dict = {'apples': 70, 'oranges': 80, 'bananas': 20, 'tomates': 30}
-print(sorted(my_dict, key=my_dict.get)[::-1])
+# my_dict = {'apples': 70, 'oranges': 80, 'bananas': 20, 'tomates': 30}
+# print(sorted(my_dict, key=my_dict.get)[::-1])
+# from pathlib import WindowsPath
+#
+# text = 'D:\data'
+# start = WindowsPath(text + '\start.log')
+#
+# print(type(start))
+# print(start)
+# i = 1
+# while i <= 10:
+#     print(i)
+#     i += 1
+from time import perf_counter_ns
+
+MAX_VALUE = 20_000_000
+SEARCH_ITEM = 19_999_999
+
+def meansure_item(data):
+    start = perf_counter_ns()
+    SEARCH_ITEM in data
+    return perf_counter_ns() - start
+
+st = set(range(1, MAX_VALUE))
+lst = list(range(1, MAX_VALUE))
+
+print(f'Set search time: {meansure_item(st)}ns')
+print(f'List search time: {meansure_item(lst)}ns')
+
