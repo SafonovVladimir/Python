@@ -354,19 +354,47 @@
 # while i <= 10:
 #     print(i)
 #     i += 1
-from time import perf_counter_ns
+# from time import perf_counter_ns
+#
+# MAX_VALUE = 20_000_000
+# SEARCH_ITEM = 19_999_999
+#
+#
+# def meansure_item(data):
+#     start = perf_counter_ns()
+#     SEARCH_ITEM in data
+#     return perf_counter_ns() - start
+#
+#
+# st = set(range(1, MAX_VALUE))
+# lst = list(range(1, MAX_VALUE))
+#
+# print(f'Set search time: {meansure_item(st)}ns')
+# print(f'List search time: {meansure_item(lst)}ns')
 
-MAX_VALUE = 20_000_000
-SEARCH_ITEM = 19_999_999
+# def most_frequent(list):
+#     return max(set(list), key=list.count)
+#
+# numbers = [ 1, 2, 3, 3, 4, 2, 1, 6, 3]
+#
+# print(most_frequent(numbers))
+# from time import sleep
+# from tqdm import tqdm
+#
+# data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+#
+# for item in tqdm(data):
+#     sleep(0.1)
 
-def meansure_item(data):
-    start = perf_counter_ns()
-    SEARCH_ITEM in data
-    return perf_counter_ns() - start
+arr = [1, 2, 3, 4]
+i = 0
 
-st = set(range(1, MAX_VALUE))
-lst = list(range(1, MAX_VALUE))
+def grow(arr):
+    if len(arr) < 2:
+        raise Exception("Array must containes 2 or more digits")
+    res = arr[i]
+    while i < (len(arr) - 1):
+        res *= arr[i+1]
+    return res
 
-print(f'Set search time: {meansure_item(st)}ns')
-print(f'List search time: {meansure_item(lst)}ns')
-
+print(grow(arr))
