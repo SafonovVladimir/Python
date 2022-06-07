@@ -386,15 +386,88 @@
 # for item in tqdm(data):
 #     sleep(0.1)
 
-arr = [1, 2, 3, 4]
-i = 0
+arr = [2, 2, 2, 2, 2, 2]
 
-def grow(arr):
-    if len(arr) < 2:
-        raise Exception("Array must containes 2 or more digits")
-    res = arr[i]
-    while i < (len(arr) - 1):
-        res *= arr[i+1]
-    return res
+# def grow(arr):
+#     i = 0
+#     res = arr[i]
+#     while i < (len(arr) - 1):
+#         res *= arr[i+1]
+#         i += 1
+#     return res
+# from math import prod as grow
+#
+# # def grow(arr):
+# #     return prod(arr)
+#
+#
+# print(grow(arr))
+s = 1.09
 
-print(grow(arr))
+
+# def cockroach_speed(s):
+#     return int(s / 3600 * 100000)
+#
+# print(cockroach_speed(s))
+# e = True
+# v = False
+#
+#
+# def set_alarm(employed, vacation):
+#     if employed == True and vacation == False:
+#         return True
+#     else:
+#         return False
+#
+#
+# print(set_alarm(e, v))
+# name = 'patrick feeney'
+# # name = 'Sam Harris'
+#
+# def abbrev_name(name):
+#     res = []
+#     for i in name.split():
+#         res.append((i[0]).upper())
+#     return '.'.join(res)
+#     # return f'{name.split()[0][0].upper()}.{name.split()[1][0].upper()}'
+#
+# print(abbrev_name(name))
+
+# def is_divide_by(number, a, b):
+#     return (number / a == number // a) and (number / b == number // b)
+#
+# print(is_divide_by(-12, 2, -5))
+
+# def digitize(n):
+#     # res = []
+#     # for i in str(n):
+#     #     res.append(int(i))
+#     # res.reverse()
+#     # return res
+#     return [int(i) for i in str(n)[::-1]]
+#     # res.reverse()
+#     # return res
+#
+# print(digitize(348597))
+
+# def positive_sum(arr):
+#     # new_arr = []
+#     # for i in arr:
+#     #     if i > 0:
+#     #         new_arr.append(i)
+#     # if len(new_arr) == 0:
+#     #     return 0
+#     # return sum(new_arr)
+#     return sum([i for i in arr if i > 0])
+#
+#
+#
+# print(positive_sum([1, 2, 3, 4, 5]))
+#
+# def solution(string, ending):
+#     return string.endswith(ending)
+#
+#
+# # print('string'[-2::])
+# print(solution('abcde', ''))
+
