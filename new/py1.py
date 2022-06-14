@@ -404,7 +404,6 @@ arr = [2, 2, 2, 2, 2, 2]
 # print(grow(arr))
 s = 1.09
 
-
 # def cockroach_speed(s):
 #     return int(s / 3600 * 100000)
 #
@@ -470,4 +469,35 @@ s = 1.09
 #
 # # print('string'[-2::])
 # print(solution('abcde', ''))
+
+# def square_sum(numbers):
+#     # res = []
+#     # for i in numbers:
+#     #     res.append(i * i)
+#     return sum(pow(i, 2) for i in numbers)
+#
+#
+# print(square_sum([0, 3, 4, 5]))
+
+
+# def high_and_low(numbers):
+#     num = numbers.split(' ')
+#     list_num = list(num)
+#     res = []
+#     for i in list_num:
+#         res.append(int(i))
+#     return f"{max(res)} {min(res)}"
+#
+#
+# print(high_and_low("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
+
+# text = "This is an example!"
+#
+# def reverse_words(text):
+#     # res = ''
+#     # for i in text.split(' '):
+#     #     res += i[::-1] + ' '
+#     return ' '.join((i[::-1]) for i in text.split(' '))
+#
+# print(reverse_words(text))
 
