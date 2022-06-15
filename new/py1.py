@@ -386,7 +386,7 @@
 # for item in tqdm(data):
 #     sleep(0.1)
 
-arr = [2, 2, 2, 2, 2, 2]
+# arr = [2, 2, 2, 2, 2, 2]
 
 # def grow(arr):
 #     i = 0
@@ -402,8 +402,6 @@ arr = [2, 2, 2, 2, 2, 2]
 #
 #
 # print(grow(arr))
-s = 1.09
-
 
 # def cockroach_speed(s):
 #     return int(s / 3600 * 100000)
@@ -537,8 +535,23 @@ s = 1.09
 # app.add_routes(routes)
 # web.run_app(app, port=5000)
 
-def filter_list(list):
-    return [l for l in list if type(l) is int]
+# def filter_list(list):
+#     return [l for l in list if type(l) is int]
 
+# print(filter_list([1, 'a', 'b', 0, 15]))
+import math
 
-print(filter_list([1,'a','b',0,15]))
+#
+# def square_digits(num):
+#     return int(''.join([str(int(i) ** 2) for i in str(num)]))
+#
+#
+# print(square_digits(9119))
+
+# def find_smallest_int(arr):
+#     return min(arr)
+#
+# print(find_smallest_int([34, -345, -1, 100]))
+
+age: int = 5
+print(age)
