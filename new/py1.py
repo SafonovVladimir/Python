@@ -404,6 +404,7 @@ arr = [2, 2, 2, 2, 2, 2]
 # print(grow(arr))
 s = 1.09
 
+
 # def cockroach_speed(s):
 #     return int(s / 3600 * 100000)
 #
@@ -501,3 +502,43 @@ s = 1.09
 #
 # print(reverse_words(text))
 
+# def count_bits(n):
+#     return bin(n).count('1')
+#
+#     # return bin(n)
+#
+#
+# print(count_bits(10))
+
+# def create_phone_number(n):
+
+
+# prefix = ''
+# for i in n:
+#     prefix += str(i)
+# res = ''.join(str(i) for i in n)
+# return f'({res[:3]}) {res[3:6]}-{res[6:]}'
+#     return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
+#
+#     # return f'({prefix})'
+#     # print(prefix)
+#
+# print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+# from aiohttp import web
+#
+# routes = web.RouteTableDef()
+#
+# @routes.get('/')
+# async def hello(request):
+#     return web.Response(text="Hello, wsdfasdfsadf")
+#
+# app = web.Application()
+# app.add_routes(routes)
+# web.run_app(app, port=5000)
+
+def filter_list(list):
+    return [l for l in list if type(l) is int]
+
+
+print(filter_list([1,'a','b',0,15]))
