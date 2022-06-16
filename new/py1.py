@@ -553,5 +553,57 @@ import math
 #
 # print(find_smallest_int([34, -345, -1, 100]))
 
-age: int = 5
-print(age)
+# age: int = 5
+# print(age)
+
+# set = {0, 5}
+# print(type(set))
+#
+# a = 'sdf;asdfasdg;wqr'
+# a.split(';')
+# print(len(a))
+
+# print(list(reversed(range(1,11))))
+#
+# list = [1,2,3,4]
+# print(list[-2])
+#
+#
+# my_list = [1, 'asf', 2]
+# my_list[1] = 'qwe'
+# print(my_list)
+
+# import numpy as np
+# a = {2, 1, 3, 4}
+# a.add(4)
+# a.add(4)
+# a.add(5)
+# print(a)
+
+# def friend(x):
+#     return [i for i in x if len(i) == 4]
+#
+#
+# print(friend(["Ryan", "Kieran", "Mark",]))
+
+from datetime import datetime
+import pytz
+
+# def make_readable(seconds):
+#     m, s = divmod(seconds, 60)
+#     h, m = divmod(m, 60)
+#     return f'{h:02d}:{m:02d}:{s:02d}'
+
+# def make_readable(seconds):
+#     m, s = divmod(seconds, 60)
+#     h, m = divmod(m, 60)
+#     print(h)
+#     return f'{h:02d}:{m:02d}:{s:02d}'
+#
+#
+# print(make_readable(60))
+
+def tribonacci(signature, n):
+
+
+# print([fibonacci_of(n) for n in range(15)])
