@@ -603,7 +603,7 @@ import pytz
 #
 # print(make_readable(60))
 
-def tribonacci(signature, n):
+# def tribonacci(signature, n):
 
 
 # print([fibonacci_of(n) for n in range(15)])
