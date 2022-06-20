@@ -589,6 +589,7 @@ import math
 from datetime import datetime
 import pytz
 
+
 # def make_readable(seconds):
 #     m, s = divmod(seconds, 60)
 #     h, m = divmod(m, 60)
@@ -607,3 +608,87 @@ import pytz
 
 
 # print([fibonacci_of(n) for n in range(15)])
+#
+# from functools import lru_cache
+# import sys
+#
+# sys.setrecursionlimit(5000)
+#
+#
+# @lru_cache()
+# def recursiveFibCached(n):
+#     if n in {0, 1}:
+#         return 1
+#     return recursiveFibCached(n - 1) + recursiveFibCached(n - 2)
+#
+#
+# def iterativeFib(n):
+#     a, b = 0, 1
+#
+#     for _ in range(n):
+#         a, b = b, a + b
+#
+#     return a
+#
+# import time
+#
+# # print(recursiveFibCached(4990))
+# # print(iterativeFib(1000000))
+#
+# import decimal
+#
+#
+# def formulaFibWithDecimal(n):
+#     decimal.getcontext().prec = 1000000
+#     root_5 = decimal.Decimal(5).sqrt()
+#     phi = ((1 + root_5) / 2)
+#     a = ((phi ** n) - ((-phi) ** -n)) / root_5
+#     return round(a)
+#
+#
+# # print(formulaFibWithDecimal(1000000))
+# start_time = time.time()
+# # iterativeFib(1000000)
+# formulaFibWithDecimal(1000000)
+# print(time.time() - start_time, "seconds")
+
+# lst = [1, 4, 4, 4, 2, 5, 6, 6, 7, 8, 9, 10]
+#
+#
+# def maxim(text):
+#     print(set(text))
+#     return max(set(text), key=text.count)
+#
+# print(maxim(lst))
+
+# occurrences = Counter(lst)
+# values = sorted(list(occurrences.values()))
+# # print(occurrences)
+# print(values[-
+# from collections import Counter
+#
+# def xo(s):
+#     res = Counter(s.lower())
+#     return res['o'] == res['x']
+#
+# print(xo("xxxoo"))
+# def number(bus_stops):
+#     # sum = 0
+#     # for i in bus_stops:
+#     #     sum += i[0] - i[1]
+#     return sum(i - o for i, o in bus_stops)
+#
+#
+# print(number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]))
+
+def fibo(n):
+    lst = []
+    a, b = 0, 1
+    lst.append(a)
+    for _ in range(n-1):
+        a, b = b, a + b
+        lst.append(a)
+    return lst
+
+print(fibo(10))
+
