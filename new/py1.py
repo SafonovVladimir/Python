@@ -681,14 +681,60 @@ import pytz
 #
 # print(number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]))
 
-def fibo(n):
-    lst = []
-    a, b = 0, 1
-    lst.append(a)
-    for _ in range(n-1):
-        a, b = b, a + b
-        lst.append(a)
-    return lst
+# def fibo(n):
+#     lst = []
+#     a, b = 0, 1
+#     lst.append(a)
+#     for _ in range(n-1):
+#         a, b = b, a + b
+#         lst.append(a)
+#     return lst
 
-print(fibo(10))
+# def fibo(n):
+#     a, b = 0, 1
+#     for _ in range(n):
+#         a, b = b, a+b
+#     return a
+#
+# print(fibo(10))
+
+# a = {2, 3, 4, 5}
+# b = {4, 5, 6, 7}
+# res = a ^ b
+# print(res)
+# import requests
+# #
+# # response = requests.get(url='https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json')
+# # currencies = response.json()
+# response = requests.get(url='https://api.exchangerate-api.com/v4/latest/USD').json()
+# currencies = response.get('rates')
+#
+# print(currencies)
+# from collections import Counter
+#
+# def anagrams(word, words):
+#
+#     return [w for w in words if Counter(word) == Counter(w)]
+#
+# print(anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']))
+
+# def narcissistic(value):
+#     # sum = 0
+#     # for i in value:
+#     #     sum += i ** len(value)
+#     # iter_value = str(value)
+#     # for i in iter_value:
+#     #     int(i) ** len(iter_value)
+#     return value == sum(int(i) ** len(str(value)) for i in str(value))
+# 
+# print(narcissistic(153))
+
+import names
+
+# name = names.get_full_name(gender='male')
+
+for _ in range(5):
+    print(names.get_full_name(gender='female'))
+
+
 
