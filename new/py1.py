@@ -589,7 +589,6 @@ import math
 from datetime import datetime
 import pytz
 
-
 # def make_readable(seconds):
 #     m, s = divmod(seconds, 60)
 #     h, m = divmod(m, 60)
@@ -729,12 +728,83 @@ import pytz
 # 
 # print(narcissistic(153))
 
-import names
+# import names
+#
+# # name = names.get_full_name(gender='male')
+#
+# for _ in range(5):
+#     print(names.get_full_name(gender='female'))
 
-# name = names.get_full_name(gender='male')
+# from art import *
+#
+# art_1 = art("coffee")
+# print(art_1)
+#
+# art_2 = art("woman", number=2)
+# print(art_2)
+#
+# print(art("random"))
+# aprint("butterfly")
+# print(randart())
+#
 
-for _ in range(5):
-    print(names.get_full_name(gender='female'))
+# from pathlib import Path
+#
+# def mp3_to_pdf(file_path, language = 'en'):
+#     if Path(file_path).is_file() and Path(file_path).suffix == '.pdf':
+#         print('File is exist!')
+#     else:
+#         print('File does not exist! Check the file path.')
+#     print(Path(file_path).stem)
+#
+# def main():
+#     mp3_to_pdf('D:\PythonProjects\TextToMp3\Programming task.pdf')
+
+# a = {'a':['b'], ['b']:'a'}
 
 
+# def pr(s = '123', q='qwe'):
+#     print("\"{}\" - {}".format(s,q))
+#
+# pr()
+
+# if __name__ == '__main__':
+#     main()
+
+# array1 = [True,  True,  True,  False,
+#           True,  True,  True,  True ,
+#           True,  False, True,  False,
+#           True,  False, False, True ,
+#           True,  True,  True,  True ,
+#           False, False, True,  True ]
+#
+#
+# def count_sheeps(sheep):
+#     # count = 0
+#     # for i in array1:
+#     #     if i is True:
+#     #         count += 1
+#     return sum(i for i in array1)
+#
+# def main():
+#     print(count_sheeps(array1))
+#
+# if __name__ == '__main__':
+#     main()
+
+import socket
+
+def get_ip_by_hostname():
+    hostname = input('Pelase enter the site name (URL): ')
+
+    try:
+        return f'Hostname: {hostname}\nIP address: {socket.gethostbyname(hostname)}'
+    except socket.gaierror as error:
+        return f'Invalid hostname - {error}'
+
+def main():
+    print(get_ip_by_hostname())
+
+if __name__ == '__main__':
+    main()
 
