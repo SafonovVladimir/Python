@@ -792,19 +792,181 @@ import pytz
 # if __name__ == '__main__':
 #     main()
 
-import socket
+# import socket
+#
+# def get_ip_by_hostname():
+#     hostname = input('Pelase enter the site name (URL): ')
+#
+#     try:
+#         return f'Hostname: {hostname}\nIP address: {socket.gethostbyname(hostname)}'
+#     except socket.gaierror as error:
+#         return f'Invalid hostname - {error}'
+#
+# def main():
+#     print(get_ip_by_hostname())
+#
+# if __name__ == '__main__':
+#     main()
 
-def get_ip_by_hostname():
-    hostname = input('Pelase enter the site name (URL): ')
+# def bool_to_word(boolean):
+#     # if boolean == True:
+#     return 'Yes' if boolean is True else 'No'
+# elif:
+#     return 'No'
 
-    try:
-        return f'Hostname: {hostname}\nIP address: {socket.gethostbyname(hostname)}'
-    except socket.gaierror as error:
-        return f'Invalid hostname - {error}'
+# def decode_morse(morse_code):
+#     # # ToDo: Accept dots, dashes and spaces, return human-readable message
+#     result_string = ''
+#     MORSE_CODE = {
+#         'A': '.-', 'B': '-...', 'C': '-.-.',
+#         'D': '-..', 'E': '.', 'F': '..-.',
+#         'G': '--.', 'H': '....', 'I': '..',
+#         'J': '.---', 'K': '-.-', 'L': '.-..',
+#         'M': '--', 'N': '-.', 'O': '---',
+#         'P': '.--.', 'Q': '--.-', 'R': '.-.',
+#         'S': '...', 'T': '-', 'U': '..-',
+#         'V': '...-', 'W': '.--', 'X': '-..-',
+#         'Y': '-.--', 'Z': '--..', '1': '.----',
+#         '2': '..---', '3': '...--', '4': '....-',
+#         '5': '.....', '6': '-....', '7': '--...',
+#         '8': '---..', '9': '----.', '0': '-----',
+#         'SOS': '...---...', '!': '--..--', ',': '--..--',
+#         '.': '.-.-.-', '?': '..--..', '/': '-..-.',
+#         '-': '-....-', '(': '-.--.', ')': '-.--.-'
+#     }
+#     # for i in morse_code.split('   '):
+#     #     for j in i.split(' '):
+#     #         for key, value in MORSE_CODE.items():
+#     #             if j == value:
+#     #                 result_string += key
+#     #     result_string += ' '
+#     return result_string.strip(' ')
+#     # return morse_code.replace('.', MORSE_CODE['.']).replace('-', MORSE_CODE['-']).replace(' ', '')
 
-def main():
-    print(get_ip_by_hostname())
+# def main():
+#     print(decode_morse('...---...'))
+#
+#
+# if __name__ == '__main__':
+#     main()
 
-if __name__ == '__main__':
-    main()
+#
+# import tornado.ioloop
+# import tornado.web
+#
+# class MainHandler(tornado.web.RequestHandler):
+#     def get(self):
+#         self.write("Hello, world")
+#
+# def make_app():
+#     return tornado.web.Application([
+#         (r"/", MainHandler),
+#         (r'/(favicon.ico)', tornado.web.StaticFileHandler, {"path": ""}),
+#     ])
+#
+# if __name__ == "__main__":
+#     app = make_app()
+#     app.listen(8000)
+#     tornado.ioloop.IOLoop.current().start()
+
+# from celery import Celery
+#
+# app = Celery('tasks', broker='redis://localhost')
+#
+# @app.task
+# def add(x, y):
+#     return x + y
+#
+# def rank(st, we, n):
+#     alphabet = {
+#         'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12,
+#         'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23,
+#         'x': 24, 'y': 25, 'z': 26
+#     }
+#     sum_dict = {}
+#     x = 0
+#     if st == '':
+#         return 'No participants'
+#     elif len(we) < n:
+#         return 'Not enough participants'
+#     else:
+#         for i in st.split(","):
+#             lst = list(i.lower())
+#             value_list = []
+#             value_list.append(len(i))
+#             for j in lst:
+#                 for k, v in alphabet.items():
+#                     if j == k:
+#                         value_list.append(v)
+#             sum_dict.update({i: (sum(value_list) * we[x])})
+#             x += 1
+#         sorted_values_list = sorted(sum_dict.values())
+#         sorted_values_list.reverse()
+#         result_dict = {}
+#         for k, v in sum_dict.items():
+#             if v == sorted_values_list[n - 1]:
+#                 result_dict.update({k: v})
+#         if len(result_dict.values()) == n:
+#             # print(list(result_dict))
+#             return list(result_dict)[-1]
+#         return sorted(result_dict.keys())[0]
+
+
+# print(rank("Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin", [4, 2, 1, 4, 3, 1, 2], 1))
+# print(rank("Lagon,Lily", [1, 5], 2))
+# print(rank("Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin", [4, 2, 1, 4, 3, 1, 2], 8))
+# print(rank("", [4, 2, 1, 4, 3, 1, 2], 6))
+# print(rank('Aubrey,Olivai,Abigail,Chloe,Andrew,Elizabeth', [3, 1, 4, 4, 3, 2], 4))
+# print(rank('Elijah,Chloe,Elizabeth,Matthew,Natalie,Jayden', [1, 3, 5, 5, 3, 6], 2))
+
+
+# print(True + True)
+
+# def bin_to_decimal(inp):
+#     return int(inp, 2)
+#
+# print(bin_to_decimal("101010"))
+
+# from collections import deque
+#
+# myDeque = deque([1, 2, 3, 4, 5])
+#
+# print('Deque is:', myDeque)
+
+# import os
+#
+# PATH = 'D:\PythonProjects'
+# dirCount = 0
+# filesCount = 0
+#
+# for root, directories, files in os.walk(PATH):
+#     for dir in directories:
+#         dirCount += 1
+#     for file in files:
+#         filesCount += 1
+#
+# print('Count of Directories is: ', dirCount)
+# print('Count of Files is: ', filesCount)
+
+# def to_camel_case(text):
+#     textList = text.replace('_', '-').split('-')
+#     resText = textList[0]
+#     for word in textList[1:]:
+#         resText += word.capitalize()
+#     return resText
+#
+# print(to_camel_case('the_stealth_warrior'))
+
+# def validate_pin(pin):
+#     # if len(pin) == 4 or len(pin) == 6) :
+#     #     for i in pin:
+#     #         return i.isdigit()
+#     # else:
+#     #     return
+#     # # return i.isdigit() for i in pin
+#
+#     return pin.isdigit() and len(pin) in (4, 6)
+#
+#
+# print(validate_pin('123'))
 
