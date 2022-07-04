@@ -589,6 +589,7 @@ import math
 from datetime import datetime
 import pytz
 
+
 # def make_readable(seconds):
 #     m, s = divmod(seconds, 60)
 #     h, m = divmod(m, 60)
@@ -970,3 +971,28 @@ import pytz
 #
 # print(validate_pin('123'))
 
+def count_smileys(arr):
+    count = 0
+    for i in arr:
+        if (':' in i or ';' in i) and ((')' in i or 'D' in i) or ('~' in i or '-' in i)):
+            if ':' in i:
+                if ':)' in i or ':D' in i:
+                        count += 1
+                if ':~' in i or ':-' in i:
+                    if ':~)' in i or ':~D' in i or ':-)' in i or ':-D' in i:
+                        count += 1
+            if ';' in i:
+                if ';)' in i or ';D' in i:
+                        count += 1
+                if ';~' in i or ';-' in i:
+                    if ';~)' in i or ';~D' in i or ';-)' in i or ';-D' in i:
+                        count += 1
+    return count
+
+
+# print(count_smileys([':oD', '(-P', ';~D', '(D', ';D', 'o)', '8)', '5D', '(D', ';D', '4-dD', '5~)', ':)', '8~x', '5o)',
+#                      ';d', ';-x', '4ox', 'oxd', ';)d', '5~x)', '(x)', '~D', '5D', 'pP', 'o)', ';8)', 'pD']), 4)
+# print(count_smileys([':D', ':~)', ';~D', ':)', ';)']), 5)
+# print(count_smileys([':)', ':(', ':D', ':O', ':;']), 2)
+print(count_smileys([';]', ':[', ';*', ':$', ';-D']), 1)
+print(count_smileys(["xyz:-)", ":-)xyz", ":--);~-)", ":~))))", "))));D", "123;-D12"]), 5)
