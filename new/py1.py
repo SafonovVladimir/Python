@@ -1040,17 +1040,27 @@ import pytz
 # else:
 #     'Enter the a and b'
 
-def countSumChars(text):
-    alphabet = {
-        1: 'aeioulnstr',
-        2: 'dg',
-        3: 'bcmp',
-        4: 'fhvwy',
-        5: 'k',
-        8: 'jx',
-        10: 'qz'
-    }
-    lowerText = text.lower()
-    return sum([k for i in lowerText for k, v in alphabet.items() if i in v])
+# def countSumChars(text):
+#     alphabet = {
+#         1: 'aeioulnstr',
+#         2: 'dg',
+#         3: 'bcmp',
+#         4: 'fhvwy',
+#         5: 'k',
+#         8: 'jx',
+#         10: 'qz'
+#     }
+#     lowerText = text.lower()
+#     return sum([k for i in lowerText for k, v in alphabet.items() if i in v])
+#
+# print(countSumChars('QQZZK'))
 
-print(countSumChars('QQZZK'))
+emails = {'mgu.edu': ['andrei_serov', 'alexander_pushkin', 'elena_belova', 'kirill_stepanov'],
+          'gmail.com': ['alena.semyonova', 'ivan.polekhin', 'marina_abrabova'],
+          'msu.edu': ['sergei.zharkov', 'julia_lyubimova', 'vitaliy.smirnoff'],
+          'yandex.ru': ['ekaterina_ivanova', 'glebova_nastya'],
+          'harvard.edu': ['john.doe', 'mark.zuckerberg', 'helen_hunt'],
+          'mail.ru': ['roman.kolosov', 'ilya_gromov', 'masha.yashkina']}
+
+print(*sorted({i + '@' + k for k, v in emails.items() for i in v}), sep='\n')
+# print(*sorted([i + '@' + k for k, v in emails.items() for i in v]), sep='\n')
