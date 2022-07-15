@@ -589,7 +589,6 @@ import math
 from datetime import datetime
 import pytz
 
-
 # def make_readable(seconds):
 #     m, s = divmod(seconds, 60)
 #     h, m = divmod(m, 60)
@@ -998,40 +997,60 @@ import pytz
 # print(count_smileys(["xyz:-)", ":-)xyz", ":--);~-)", ":~))))", "))));D", "123;-D12"]), 5)
 
 
-class Node:
+# class Node:
+#     def __init__(self, value):
+#         self.value = value
+#         self.left = None
+#         self.right = None
+#
+# def pre_order(node):
+#     if node:
+#         print(node.value)
+#         pre_order(node.left)
+#         pre_order(node.right)
+#
+# def post_order(node):
+#     if node:
+#         post_order(node.left)
+#         post_order(node.right)
+#         print(node.value)
+#
+# def in_order(node):
+#     if node:
+#         in_order(node.left)
+#         print(node.value)
+#         in_order(node.right)
+#
+# tree = Node(1)
+# tree.left = Node(2)
+# tree.right = Node(3)
+# tree.left.left = Node(4)
+# tree.left.right = Node(5)
+# tree.right.left = Node(6)
+# tree.right.right = Node(7)
+#
+#
+# # pre_order(tree)
+# # post_order(tree)
+# in_order(tree)
+# a = int(input('Enter a: '))
+# b = int(input('Enter b: '))
+# if a and b:
+#     print(a * b)
+# else:
+#     'Enter the a and b'
 
-    def __init__(self, value):
-        self.value = value
-        self.left = None
-        self.right = None
+def countSumChars(text):
+    alphabet = {
+        1: 'aeioulnstr',
+        2: 'dg',
+        3: 'bcmp',
+        4: 'fhvwy',
+        5: 'k',
+        8: 'jx',
+        10: 'qz'
+    }
+    lowerText = text.lower()
+    return sum([k for i in lowerText for k, v in alphabet.items() if i in v])
 
-def pre_order(node):
-    if node:
-        print(node.value)
-        pre_order(node.left)
-        pre_order(node.right)
-
-def post_order(node):
-    if node:
-        post_order(node.left)
-        post_order(node.right)
-        print(node.value)
-
-def in_order(node):
-    if node:
-        in_order(node.left)
-        print(node.value)
-        in_order(node.right)
-
-tree = Node(1)
-tree.left = Node(2)
-tree.right = Node(3)
-tree.left.left = Node(4)
-tree.left.right = Node(5)
-tree.right.left = Node(6)
-tree.right.right = Node(7)
-
-
-# pre_order(tree)
-# post_order(tree)
-in_order(tree)
+print(countSumChars('QQZZK'))
