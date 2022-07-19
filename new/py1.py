@@ -1065,18 +1065,14 @@ import pytz
 # print(*sorted({i + '@' + k for k, v in emails.items() for i in v}), sep='\n')
 # # print(*sorted([i + '@' + k for k, v in emails.items() for i in v]), sep='\n')
 
-text = 'Дмитрий считает, что текст в скобках (например вот такой) читать не надо. Написать программу, которая ' \
-       'убирает скобки (и все что внутри них).'
+text = 'Дмитрий считает, что текст в скобках (например (asdfasdf) вот такой) читать не надо. Написать программу, которая ' \
+       'убирает скобки (и все что внутри них)().'
 
-def removeBrackets(t):
-       if '(' in t:
-              pos_left_bracket = t.find('(')
-              pos_right_bracket = t.find(')')+1
-              part1 = t[:pos_left_bracket-1]
-              part2 = t[pos_right_bracket:]
-              new_text = part1 + part2
-              return removeBrackets(new_text)
-       else:
-              return t
+def shortener(st):
+    while '(' in st or ')' in st:
+        left = st.rfind('(')
+        right = st.find(')', left)
+        st = st.replace(st[left:right + 1], '')
+    return st
 
-print(removeBrackets(text))
+print(shortener(text))
