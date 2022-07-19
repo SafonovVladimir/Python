@@ -1055,12 +1055,28 @@ import pytz
 #
 # print(countSumChars('QQZZK'))
 
-emails = {'mgu.edu': ['andrei_serov', 'alexander_pushkin', 'elena_belova', 'kirill_stepanov'],
-          'gmail.com': ['alena.semyonova', 'ivan.polekhin', 'marina_abrabova'],
-          'msu.edu': ['sergei.zharkov', 'julia_lyubimova', 'vitaliy.smirnoff'],
-          'yandex.ru': ['ekaterina_ivanova', 'glebova_nastya'],
-          'harvard.edu': ['john.doe', 'mark.zuckerberg', 'helen_hunt'],
-          'mail.ru': ['roman.kolosov', 'ilya_gromov', 'masha.yashkina']}
+# emails = {'mgu.edu': ['andrei_serov', 'alexander_pushkin', 'elena_belova', 'kirill_stepanov'],
+#           'gmail.com': ['alena.semyonova', 'ivan.polekhin', 'marina_abrabova'],
+#           'msu.edu': ['sergei.zharkov', 'julia_lyubimova', 'vitaliy.smirnoff'],
+#           'yandex.ru': ['ekaterina_ivanova', 'glebova_nastya'],
+#           'harvard.edu': ['john.doe', 'mark.zuckerberg', 'helen_hunt'],
+#           'mail.ru': ['roman.kolosov', 'ilya_gromov', 'masha.yashkina']}
+#
+# print(*sorted({i + '@' + k for k, v in emails.items() for i in v}), sep='\n')
+# # print(*sorted([i + '@' + k for k, v in emails.items() for i in v]), sep='\n')
 
-print(*sorted({i + '@' + k for k, v in emails.items() for i in v}), sep='\n')
-# print(*sorted([i + '@' + k for k, v in emails.items() for i in v]), sep='\n')
+text = 'Дмитрий считает, что текст в скобках (например вот такой) читать не надо. Написать программу, которая ' \
+       'убирает скобки (и все что внутри них).'
+
+def removeBrackets(t):
+       if '(' in t:
+              pos_left_bracket = t.find('(')
+              pos_right_bracket = t.find(')')+1
+              part1 = t[:pos_left_bracket-1]
+              part2 = t[pos_right_bracket:]
+              new_text = part1 + part2
+              return removeBrackets(new_text)
+       else:
+              return t
+
+print(removeBrackets(text))
