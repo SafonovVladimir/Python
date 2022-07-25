@@ -1091,18 +1091,16 @@
 # do_time = end_time - start_time
 #
 # print('Program execution time is: ', do_time)
-import tkinter
-from tkinter import messagebox
-
 
 def alphanumeric(password):
-    root = tkinter.Tk()
-    root.withdraw()
-    if password == "":
-        messagebox.showwarning("Error", "Password must have at least one character")
-    elif " " in password:
-        messagebox.showwarning("Error", "Password don't have any whitespaces / underscore")
-    elif password.isascii():
-        messagebox.showinfo("Good job", "The password is correct")
+    # if not password.isalnum():
+    #     return False
+    # elif password == "":
+    #     return False
+    # elif " " in password:
+    #     return False
+    # else:
+    #     return True
+    return password.isalnum()
 
-alphanumeric("Company123")
+print(alphanumeric("Company123"))
