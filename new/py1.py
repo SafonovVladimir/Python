@@ -1065,14 +1065,29 @@ import pytz
 # print(*sorted({i + '@' + k for k, v in emails.items() for i in v}), sep='\n')
 # # print(*sorted([i + '@' + k for k, v in emails.items() for i in v]), sep='\n')
 
-text = 'Дмитрий считает, что текст в скобках (например (asdfasdf) вот такой) читать не надо. Написать программу, которая ' \
-       'убирает скобки (и все что внутри них)().'
+# text = 'Дмитрий считает, что текст в скобках (например (asdfasdf) вот такой) читать не надо. Написать программу, которая ' \
+#        'убирает скобки (и все что внутри них)().'
+#
+# def shortener(st):
+#     while '(' in st or ')' in st:
+#         left = st.rfind('(')
+#         right = st.find(')', left)
+#         st = st.replace(st[left:right + 1], '')
+#     return st
+#
+# print(shortener(text))
 
-def shortener(st):
-    while '(' in st or ')' in st:
-        left = st.rfind('(')
-        right = st.find(')', left)
-        st = st.replace(st[left:right + 1], '')
-    return st
+import time
 
-print(shortener(text))
+start_time = time.time()
+def do_something():
+    a = 5
+    b = 10
+    c = a ^ b
+do_something()
+time.sleep(5)
+end_time = time.time()
+do_time = end_time - start_time
+
+print('Program execution time is: ', do_time)
+
