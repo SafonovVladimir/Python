@@ -539,7 +539,7 @@
 #     return [l for l in list if type(l) is int]
 
 # print(filter_list([1, 'a', 'b', 0, 15]))
-import math
+# import math
 
 #
 # def square_digits(num):
@@ -585,9 +585,10 @@ import math
 #
 #
 # print(friend(["Ryan", "Kieran", "Mark",]))
-
-from datetime import datetime
-import pytz
+# import warnings
+# import warnings
+# from datetime import datetime
+# import pytz
 
 # def make_readable(seconds):
 #     m, s = divmod(seconds, 60)
@@ -815,7 +816,7 @@ import pytz
 #     return 'No'
 
 # def decode_morse(morse_code):
-#     # # ToDo: Accept dots, dashes and spaces, return human-readable message
+#     # #
 #     result_string = ''
 #     MORSE_CODE = {
 #         'A': '.-', 'B': '-...', 'C': '-.-.',
@@ -1077,17 +1078,31 @@ import pytz
 #
 # print(shortener(text))
 
-import time
+# import time
+#
+# start_time = time.time()
+# def do_something():
+#     a = 5
+#     b = 10
+#     c = a ^ b
+# do_something()
+# time.sleep(5)
+# end_time = time.time()
+# do_time = end_time - start_time
+#
+# print('Program execution time is: ', do_time)
+import tkinter
+from tkinter import messagebox
 
-start_time = time.time()
-def do_something():
-    a = 5
-    b = 10
-    c = a ^ b
-do_something()
-time.sleep(5)
-end_time = time.time()
-do_time = end_time - start_time
 
-print('Program execution time is: ', do_time)
+def alphanumeric(password):
+    root = tkinter.Tk()
+    root.withdraw()
+    if password == "":
+        messagebox.showwarning("Error", "Password must have at least one character")
+    elif " " in password:
+        messagebox.showwarning("Error", "Password don't have any whitespaces / underscore")
+    elif password.isascii():
+        messagebox.showinfo("Good job", "The password is correct")
 
+alphanumeric("Company123")
