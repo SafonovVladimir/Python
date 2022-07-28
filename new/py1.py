@@ -1092,15 +1092,20 @@
 #
 # print('Program execution time is: ', do_time)
 
-def alphanumeric(password):
-    # if not password.isalnum():
-    #     return False
-    # elif password == "":
-    #     return False
-    # elif " " in password:
-    #     return False
-    # else:
-    #     return True
-    return password.isalnum()
+# def alphanumeric(password):
+#     # if not password.isalnum():
+#     #     return False
+#     # elif password == "":
+#     #     return False
+#     # elif " " in password:
+#     #     return False
+#     # else:
+#     #     return True
+#     return password.isalnum()
+#
+# print(alphanumeric("Company123"))
 
-print(alphanumeric("Company123"))
+square = lambda n: n ** 2
+arg = 5
+
+print(f"Square of {arg} is {square(arg)}")
