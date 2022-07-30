@@ -1151,15 +1151,27 @@
 # print(alphabet_position("The sunset sets at twelve o' clock."))
 
 
-def rgb(r, g, b):
-    def rec(x):
-        if 0 <= x <= 255:
-            return ("{:02x}".format(x)).upper()
-        elif x > 255:
-            return 'FF'
+# def rgb(r, g, b):
+#     def rec(x):
+#         if 0 <= x <= 255:
+#             return ("{:02x}".format(x)).upper()
+#         elif x > 255:
+#             return 'FF'
+#         else:
+#             return '00'
+#     return rec(r) + rec(g) + rec(b)
+#
+#
+# print(rgb(-20, 275, 125))
+
+def move_zeros(lst):
+    zero_lst = []
+    nonzero_lst = []
+    for i in lst:
+        if i == 0:
+            zero_lst.append(i)
         else:
-            return '00'
-    return rec(r) + rec(g) + rec(b)
+            nonzero_lst.append(i)
+    return nonzero_lst+zero_lst
 
-
-print(rgb(-20, 275, 125))
+print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
