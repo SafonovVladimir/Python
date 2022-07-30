@@ -1105,7 +1105,61 @@
 #
 # print(alphanumeric("Company123"))
 
-square = lambda n: n ** 2
-arg = 5
+# square = lambda n: n ** 2
+# arg = 5
+#
+# print(f"Square of {arg} is {square(arg)}")
 
-print(f"Square of {arg} is {square(arg)}")
+# def cleaned_str(st):
+#     clean_lst = []
+#     for symbol in st:
+#         if symbol == '@' and clean_lst:
+#             clean_lst.pop()
+#         elif symbol != '@':
+#             clean_lst.append(symbol)
+#     return ''.join(clean_lst)
+#
+#
+# print(cleaned_str('гр@оо@лк@оц@ва'))
+# print(cleaned_str('сварка@@@@@лоб@ну@'))
+#
+
+# prime_numbers = [2, 3, 5, 7]
+#
+# removed_element = prime_numbers.pop()
+#
+# print('Removed Element:', removed_element)
+# print('Updated List:', prime_numbers)
+#
+# # Output:
+# # Removed Element: 5
+# # Updated List: [2, 3, 7]
+
+# def array_diff(a, b):
+#     return [x for x in a if x not in b]
+#
+# print(array_diff([1,2,2,2,3],[2]))
+
+# def alphabet_position(text):
+#     alphabet = {
+#         'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7, 'h': 8, 'i': 9, 'j': 10, 'k': 11, 'l': 12,
+#         'm': 13, 'n': 14, 'o': 15, 'p': 16, 'q': 17, 'r': 18, 's': 19, 't': 20, 'u': 21, 'v': 22, 'w': 23,
+#         'x': 24, 'y': 25, 'z': 26
+#     }
+#     return " ".join([str(v) for i in text.lower() for k, v in alphabet.items() if i == k])
+#
+# print(alphabet_position("The sunset sets at twelve o' clock."))
+
+
+def rgb(r, g, b):
+    def rec(x):
+        if 0 <= x <= 255:
+            return ("{:02x}".format(x)).upper()
+        elif x > 255:
+            return 'FF'
+        else:
+            return '00'
+    return rec(r) + rec(g) + rec(b)
+
+
+print(rgb(-20, 275, 125))
