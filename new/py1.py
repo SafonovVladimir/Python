@@ -1176,14 +1176,21 @@
 #
 # print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
 
-def nb_year(p0, percent, aug, p):
-    count = 0
-    while p0 < p:
-        p0 += int(p0 * (percent / 100)) + aug
-        count += 1
-    return count
+# def nb_year(p0, percent, aug, p):
+#     count = 0
+#     while p0 < p:
+#         p0 += int(p0 * (percent / 100)) + aug
+#         count += 1
+#     return count
+#
+#
+# print(nb_year(1500, 5, 100, 5000))
+# print(nb_year(1500000, 2.5, 10000, 2000000))
+# print(nb_year(1500000, 0.25, 1000, 2000000))
+
+def add_binary(a, b):
+    return bin(a + b)[2:]
 
 
-print(nb_year(1500, 5, 100, 5000))
-print(nb_year(1500000, 2.5, 10000, 2000000))
-print(nb_year(1500000, 0.25, 1000, 2000000))
+print(add_binary(1, 1))
+print(add_binary(0, 1))
