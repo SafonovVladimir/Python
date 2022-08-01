@@ -1164,14 +1164,26 @@
 #
 # print(rgb(-20, 275, 125))
 
-def move_zeros(lst):
-    zero_lst = []
-    nonzero_lst = []
-    for i in lst:
-        if i == 0:
-            zero_lst.append(i)
-        else:
-            nonzero_lst.append(i)
-    return nonzero_lst+zero_lst
+# def move_zeros(lst):
+#     zero_lst = []
+#     nonzero_lst = []
+#     for i in lst:
+#         if i == 0:
+#             zero_lst.append(i)
+#         else:
+#             nonzero_lst.append(i)
+#     return nonzero_lst+zero_lst
+#
+# print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
 
-print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
+def nb_year(p0, percent, aug, p):
+    count = 0
+    while p0 < p:
+        p0 += int(p0 * (percent / 100)) + aug
+        count += 1
+    return count
+
+
+print(nb_year(1500, 5, 100, 5000))
+print(nb_year(1500000, 2.5, 10000, 2000000))
+print(nb_year(1500000, 0.25, 1000, 2000000))
