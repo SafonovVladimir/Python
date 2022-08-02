@@ -1188,9 +1188,28 @@
 # print(nb_year(1500000, 2.5, 10000, 2000000))
 # print(nb_year(1500000, 0.25, 1000, 2000000))
 
-def add_binary(a, b):
-    return bin(a + b)[2:]
+# def add_binary(a, b):
+#     return bin(a + b)[2:]
+#
+#
+# print(add_binary(1, 1))
+# print(add_binary(0, 1))
+
+# x = format('+', '*>4')
+# print(x)
+# print(dir(x))
+from itertools import combinations
+
+xs = [100, 76, 56, 44, 89, 73, 68, 56, 64, 123, 2333, 144, 50, 132, 123, 34, 89]
+
+def choose_best_sum(t, k, list):
+    return max((sum(i) for i in combinations(list, k) if sum(i) <= t), default=None)
+
+    # return sorted(res)
+
+print(choose_best_sum(230, 4, xs))
+print(choose_best_sum(430, 5, xs))
+print(choose_best_sum(430, 8, xs))
 
 
-print(add_binary(1, 1))
-print(add_binary(0, 1))
+
