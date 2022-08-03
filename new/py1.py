@@ -1198,18 +1198,55 @@
 # x = format('+', '*>4')
 # print(x)
 # print(dir(x))
-from itertools import combinations
+# from itertools import combinations
+#
+# xs = [100, 76, 56, 44, 89, 73, 68, 56, 64, 123, 2333, 144, 50, 132, 123, 34, 89]
+#
+# def choose_best_sum(t, k, list):
+#     return max((sum(i) for i in combinations(list, k) if sum(i) <= t), default=None)
+#
+#     # return sorted(res)
+#
+# print(choose_best_sum(230, 4, xs))
+# print(choose_best_sum(430, 5, xs))
+# print(choose_best_sum(430, 8, xs))
 
-xs = [100, 76, 56, 44, 89, 73, 68, 56, 64, 123, 2333, 144, 50, 132, 123, 34, 89]
+# def invert(lst):
+#     # res = []
+#     # for i in lst:
+#     #     if i != 0:
+#     #         res.append(0-i)
+#     #     else:
+#     #         res.append(0)
+#     return [(0 - i) if i != 0 else 0 for i in lst]
+#
+#
+# print(invert([1, -2, 3, -4, 5]))
+# print(invert([]))
+# print(invert([0]))
 
-def choose_best_sum(t, k, list):
-    return max((sum(i) for i in combinations(list, k) if sum(i) <= t), default=None)
+# def first_non_consecutive(arr):
+#     for i in range(0, len(arr)-1):
+#         if (arr[i + 1] - arr[i]) > 1:
+#             return arr[i + 1]
+#
+#
+# print(first_non_consecutive([1, 2, 3, 4, 6, 7, 8]))
+# print(first_non_consecutive([1, 2, 3, 4, 5, 6, 7, 8]))
 
-    # return sorted(res)
+# def get_count(sentence):
+#     vowels = ['a', 'e', 'i', 'o', 'u']
+#     # count = 0
+#     # for i in sentence:
+#     #     if i in vowels:
+#     #         count += 1
+#     # return count
+#     return sum(i in vowels for i in sentence)
+#
+# print(get_count("abracadabra"))
 
-print(choose_best_sum(230, 4, xs))
-print(choose_best_sum(430, 5, xs))
-print(choose_best_sum(430, 8, xs))
+def paint_letterboxes(start, finish):
+    return [([int(j) for i in range(start, finish + 1) for j in str(i)].count(digit)) for digit in range(0, 10)]
 
-
-
+print(paint_letterboxes(125, 132))
+# paint_letterboxes(123, 125)
