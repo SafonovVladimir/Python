@@ -1245,8 +1245,268 @@
 #
 # print(get_count("abracadabra"))
 
-def paint_letterboxes(start, finish):
-    return [([int(j) for i in range(start, finish + 1) for j in str(i)].count(digit)) for digit in range(0, 10)]
+# def paint_letterboxes(start, finish):
+#     return [([int(j) for i in range(start, finish + 1) for j in str(i)].count(digit)) for digit in range(0, 10)]
+#
+# print(paint_letterboxes(125, 132))
+# # paint_letterboxes(123, 125)
+#
 
-print(paint_letterboxes(125, 132))
-# paint_letterboxes(123, 125)
+# class RomanNumerals:
+#
+# def to_roman(val):
+#     result = ""
+#
+#     if val >= 1000:
+#         m = val // 1000
+#         result += "M" * m
+#         val -= m * 1000
+#         to_roman(val)
+#     elif 100 <= val < 1000:
+#         if val >= 500:
+#             result += "D"
+#             val -= 500
+#             to_roman(val)
+#         if val < 500:
+#             c = val // 100
+#             result += "C" * c
+#             val -= c * 100
+#             to_roman(val)
+#     elif 10 <= val < 100:
+#         if val >= 50:
+#             result += "L"
+#             val -= 50
+#             to_roman(val)
+#         if val < 50:
+#             x = val // 10
+#             result += "X" * x
+#             val -= x * 10
+#             to_roman(val)
+#     else:
+#         if val >= 5:
+#             result += "V"
+#             val -= 5
+#             to_roman(val)
+#         if val < 5:
+#             if val == 4:
+#                 result += "VI"
+#                 to_roman(val)
+#             else:
+#                 result += "I" * val
+#     return result
+#
+# # print(to_roman(5))
+# print(to_roman(25))
+
+# def get_drinks(number_of_guests: int, step: int) -> int:
+#     for i in range(1, number_of_guests+1, step):
+#         print(i)
+#     # return sum([i for i in range(0, number_of_guests+1, step)])
+#
+# print((get_drinks(10, 3)))
+
+# from typing import Union
+#
+#
+# def calculate_profit(amount: int, percent: Union[float, int], period: int) -> Union[float, int]:
+#     dep = amount
+#     start = 0
+#     while start < period:
+#         amount += (amount * percent / 100)
+#         start += 1
+#     profit = amount - dep
+#     return round(profit, 2)
+#
+#
+# # print(calculate_profit(1000, 5, 1))
+# print(calculate_profit(12500, 3, 12))
+# def make_abbr(words: str) -> str:
+#     # res = []
+#     # for word in words.split(' '):
+#     #     res.append(word[0].upper())
+#     return ''.join([word[0].upper() for word in words.split(' ') if words != ""])
+#
+# print(make_abbr(""))
+
+# def is_werewolf(target: str) -> bool:
+#     text = ''
+#     for i in target:
+#         if i.isalpha():
+#             text += i
+#     if text == text[::-1]:
+#         return True
+#     else:
+#         return False
+#
+# # print(is_werewolf("racecar"))
+# # print(is_werewolf("home"))
+# print(is_werewolf("red rum sir is murder?"))
+
+# def get_success_rate(statistics: str) -> int:
+#     if statistics:
+#         success_student_list = []
+#         for i in statistics:
+#             success_student_list.append(int(i))
+#         sum_of_success_student = sum(success_student_list)
+#         lenght = len(statistics)
+#         return round(sum_of_success_student / lenght * 100)
+#     else:
+#         return 0
+
+# def happy_birthday() -> None:
+#     name = input("What's your name? ")
+#     print(f"Hi, {name}!")
+#
+# happy_birthday()
+
+# def parity_checker() -> None:
+#     digit = input("What number do you want to check?")
+#     if (int(digit) % 2) == 0:
+#         print('Even')
+#     else:
+#         print('Odd')
+
+# def get_location(coordinates: list, commands: list) -> list:
+#     command = {
+#         'forward': [0, 1],
+#         'back': [0, -1],
+#         'right': [1, 0],
+#         'left': [-1, 0],
+#     }
+#     for c in commands:
+#         for k, v in command.items():
+#             if c in k:
+#                 coordinates = [sum(x) for x in zip(coordinates, v)]
+#     return coordinates
+#
+#
+# print(get_location([0, 0], ["forward", "right"]))
+# print(get_location([2, 3], ["back", "back", "back", "right"]))
+# print(get_location([0, 5], ["back", "back", "back", "right", "left", "forward"]))
+#
+# import math
+#
+#
+# def get_plan(current_production: int, month: int, percent: int):
+#     res = []
+#     for i in range(0, month):
+#         current_production += math.floor(current_production * percent / 100)
+#         res.append(current_production)
+#     return res
+#     # return [(current_production += math.floor(current_production * percent / 100)) for i in range(0, month)]
+#
+#
+# print(get_plan(1000, 6, 30))  # [1300, 1690, 2197, 2856, 3712, 4825]
+# print(get_plan(500, 3, 50))  # == [750, 1125, 1687]
+
+# from math import floor
+#
+#
+# def get_speed_statistic(test_results: list) -> list:
+#     if test_results:
+#         res = []
+#         minimum = min(test_results)
+#         maximum = max(test_results)
+#         med = floor(sum(test_results)/len(test_results))
+#         res.append(minimum)
+#         res.append(maximum)
+#         res.append(med)
+#     return res
+#     # return [min(test_results), max(test_results), floor(sum(test_results)/len(test_results))]
+
+# print(get_speed_statistic([10, 10, 11, 9, 12, 8]))
+
+# def split_string(string: str) -> list:
+#     res = []
+#     if len(string) % 2 == 0:
+#         work_string = string
+#     else:
+#         work_string = string+'_'
+#     for i in range(0, len(work_string)):
+#         print(i)
+#         if (i % 2) == 0:
+#             res.append(work_string[i:i+2])
+#     return res
+#
+# print(split_string('asd'))
+
+# def scrolling_text(string: str) -> list:
+#     res = []
+#     for i in range(0, len(string)):
+#         res.append(string.upper())
+#         string = (string[1:] + string[0]).upper()
+#     return res
+#     # return [(string[1:] + string[0]).upper() for i in range(0, len(string))]
+#
+# print(scrolling_text("robot"))
+#
+# def check_number(number: int) -> list:
+#     res = []
+#     if number > 0:
+#         res.append(True)
+#     else:
+#         res.append(False)
+#     if number % 2 == 0:
+#         res.append(True)
+#     else:
+#         res.append(False)
+#     if str(number)[-1] == '0':
+#         print(str(number)[-1])
+#         res.append(True)
+#     else:
+#         res.append(False)
+#     return res
+#
+# print(check_number(3))
+# print(check_number(10))
+
+# def get_lists_sum(ls1: list, ls2: list) -> int:
+#     return sum(ls1+ls2)
+#
+# print(get_lists_sum([1, 2], [3, 4]))# == 10  # 1 + 2 + 3 + 4 = 10
+# print(get_lists_sum([], [])) # == 0
+
+# def combine_lists(ls1: list, ls2: list) -> list:
+#     return [sum(x) for x in zip(list1, list2)]
+# def is_special_number(number: int) -> str:
+#     special = [1, 2, 3, 4, 5]
+#     for i in str(number):
+#         if int(i) not in special:
+#             return 'NOT!!'
+#     return 'Special!!'
+#
+#
+# print(is_special_number(23))
+# print(is_special_number(39))
+
+# def is_tidy(number: int) -> bool:
+#     return number == int(''.join(sorted(str(number))))
+#
+# print(is_tidy(123))
+
+def is_palindrome(string: str) -> bool:
+    # text = ''
+    # for i in string:
+    #     if i.isdigit():
+    #         return False
+    #     if i.isalpha():
+    #         text += i
+    # if text == text[::-1]:
+    #     return True
+    # else:
+    #     return False
+    return string == string[::-1]
+print(is_palindrome('palin0dnilap'))
+print(is_palindrome('anna'))
+
+# def get_unique_items(ls: list) -> list:
+#     return list(set(ls))
+#
+# print(get_unique_items([1, 2, 4, 4]))
+
+# def get_three_largest(ls: list) -> list:
+#     return sorted(ls)[-3:]
+#
+# print(get_three_largest([1, 4, 2, 3, -1]))# == [4, 2, 3]
+# print(get_three_largest([]))# == []
+# print(get_three_largest([2, 10]))# == [2, 10]
