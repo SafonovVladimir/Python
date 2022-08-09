@@ -1484,20 +1484,20 @@
 #
 # print(is_tidy(123))
 
-def is_palindrome(string: str) -> bool:
-    # text = ''
-    # for i in string:
-    #     if i.isdigit():
-    #         return False
-    #     if i.isalpha():
-    #         text += i
-    # if text == text[::-1]:
-    #     return True
-    # else:
-    #     return False
-    return string == string[::-1]
-print(is_palindrome('palin0dnilap'))
-print(is_palindrome('anna'))
+# def is_palindrome(string: str) -> bool:
+#     # text = ''
+#     # for i in string:
+#     #     if i.isdigit():
+#     #         return False
+#     #     if i.isalpha():
+#     #         text += i
+#     # if text == text[::-1]:
+#     #     return True
+#     # else:
+#     #     return False
+#     return string == string[::-1]
+# print(is_palindrome('palin0dnilap'))
+# print(is_palindrome('anna'))
 
 # def get_unique_items(ls: list) -> list:
 #     return list(set(ls))
@@ -1510,3 +1510,8 @@ print(is_palindrome('anna'))
 # print(get_three_largest([1, 4, 2, 3, -1]))# == [4, 2, 3]
 # print(get_three_largest([]))# == []
 # print(get_three_largest([2, 10]))# == [2, 10]
+
+import re
+data = b'A:B,C'
+x = re.split(b'[:,]', data)[1].decode()
+print(x)
