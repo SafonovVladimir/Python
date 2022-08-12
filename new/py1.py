@@ -1517,10 +1517,46 @@
 # print(x)
 
 # import antigravity
-word = 'mississippi'
-counter = {}
+# word = 'mississippi'
+# counter = {}
+#
+# for letter in word:
+#     counter[letter] = counter.get(letter, 0) + 1
+#
+# print(counter)
 
-for letter in word:
-    counter[letter] = counter.get(letter, 0) + 1
+# def descending_order(num):
+#     # lst = []
+#     # for i in str(num):
+#     #     lst.append(i)
+#     # result = sorted([i for i in str(num)])[::-1]
+#     # result.reverse()
+#     return int(''.join(sorted(str(num), reverse=True)))
+#
+# print(descending_order(15))
 
-print(counter)
+# def longest(a1, a2):
+#     return ''.join(sorted(set(a1 + a2)))
+#
+# print(longest("aretheyhere", "yestheyarehere"))
+
+def count_positives_sum_negatives(arr):
+    if len(arr) == 0:
+        return []
+
+    pos = 0
+    neg = 0
+    for i in arr:
+        if i > 0:
+            pos += 1
+        elif i < 0:
+            neg += i
+
+    return [pos, neg]
+
+print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]), [10, -65])
+print(count_positives_sum_negatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]), [8, -50])
+print(count_positives_sum_negatives([1]), [1, 0])
+print(count_positives_sum_negatives([-1]), [0, -1])
+print(count_positives_sum_negatives([0, 0, 0, 0, 0, 0, 0, 0, 0]), [0, 0])
+print(count_positives_sum_negatives([]), [])
