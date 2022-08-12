@@ -1510,8 +1510,17 @@
 # print(get_three_largest([1, 4, 2, 3, -1]))# == [4, 2, 3]
 # print(get_three_largest([]))# == []
 # print(get_three_largest([2, 10]))# == [2, 10]
+#
+# import re
+# data = b'A:B,C'
+# x = re.split(b'[:,]', data)[1].decode()
+# print(x)
 
-import re
-data = b'A:B,C'
-x = re.split(b'[:,]', data)[1].decode()
-print(x)
+# import antigravity
+word = 'mississippi'
+counter = {}
+
+for letter in word:
+    counter[letter] = counter.get(letter, 0) + 1
+
+print(counter)
