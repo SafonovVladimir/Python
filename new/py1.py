@@ -1540,23 +1540,55 @@
 #
 # print(longest("aretheyhere", "yestheyarehere"))
 
-def count_positives_sum_negatives(arr):
-    if len(arr) == 0:
-        return []
+# def count_positives_sum_negatives(arr):
+#     if len(arr) == 0:
+#         return []
+#
+#     pos = 0
+#     neg = 0
+#     for i in arr:
+#         if i > 0:
+#             pos += 1
+#         elif i < 0:
+#             neg += i
+#
+#     return [pos, neg]
+#
+# print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]), [10, -65])
+# print(count_positives_sum_negatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]), [8, -50])
+# print(count_positives_sum_negatives([1]), [1, 0])
+# print(count_positives_sum_negatives([-1]), [0, -1])
+# print(count_positives_sum_negatives([0, 0, 0, 0, 0, 0, 0, 0, 0]), [0, 0])
+# print(count_positives_sum_negatives([]), [])
 
-    pos = 0
-    neg = 0
-    for i in arr:
-        if i > 0:
-            pos += 1
-        elif i < 0:
-            neg += i
+# def find_short(text):
+#     # res = []
+#     # for word in text.split(' '):
+#     #     res.append(len(word))
+#     # # sorted(res)
+#     # # print(sorted(res))
+#     return sorted([len(word) for word in text.split(' ')])[0]
+#
+#
+# print(find_short("bitcoin take over the world maybe who knows perhaps"), 3)
+# print(find_short("turns out random test cases are easier than writing out basic ones"), 3)
+# print(find_short("lets talk about javascript the best language"), 3)
+# print(find_short("i want to travel the world writing code one day"), 1)
+# print(find_short("Lets all go on holiday somewhere very cold"), 2)
+# print(find_short("Let's travel abroad shall we"), 2)
 
-    return [pos, neg]
+# def fake_bin(x):
+#     # result = ''
+#     # for i in x:
+#     #     if int(i) < 5:
+#     #         result += '0'
+#     #     else:
+#     #         result += '1'
+#     return ''.join(['0' if int(i) < 5 else '1' for i in x])
+#
+# print(fake_bin('45385593107843568'))
 
-print(count_positives_sum_negatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]), [10, -65])
-print(count_positives_sum_negatives([0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14]), [8, -50])
-print(count_positives_sum_negatives([1]), [1, 0])
-print(count_positives_sum_negatives([-1]), [0, -1])
-print(count_positives_sum_negatives([0, 0, 0, 0, 0, 0, 0, 0, 0]), [0, 0])
-print(count_positives_sum_negatives([]), [])
+def pig_it(text):
+    return ' '.join((word[1:]+word[0]+'ay') if word.isalpha() else word for word in text.split(' '))
+
+print(pig_it('Pig latin is cool'))
