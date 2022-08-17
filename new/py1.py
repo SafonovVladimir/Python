@@ -1627,4 +1627,23 @@
 # else:
 #     print(f'All elements at least {min_len} letters long')
 
-print(bool(print(print(5))))
+# print(bool(print(print(5))))
+#
+# lst = ['Python', 'C#', 'Java']
+# i = iter(lst)
+# next(i)
+# print(next(i))
+
+import os
+
+current_directory = os.getcwd()
+os.chdir(r'C:\Users\restg\Downloads')
+# print(os.getcwd())
+list_dir = os.listdir()
+# print(list_dir)
+for dir in list_dir:
+    # print(dir)
+    if dir.endswith('.zip'):
+        # print(dir)
+        os.remove(dir)
+    print(dir)
