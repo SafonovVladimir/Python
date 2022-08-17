@@ -1638,12 +1638,8 @@ import os
 
 current_directory = os.getcwd()
 os.chdir(r'C:\Users\restg\Downloads')
-# print(os.getcwd())
 list_dir = os.listdir()
-# print(list_dir)
 for dir in list_dir:
-    # print(dir)
     if dir.endswith('.zip'):
-        # print(dir)
         os.remove(dir)
     print(dir)
