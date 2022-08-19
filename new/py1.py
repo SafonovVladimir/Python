@@ -1634,12 +1634,47 @@
 # next(i)
 # print(next(i))
 
-import os
+# import os
+#
+# current_directory = os.getcwd()
+# os.chdir(r'C:\Users\restg\Downloads')
+# list_dir = os.listdir()
+# for dir in list_dir:
+#     if dir.endswith('.zip'):
+#         os.remove(dir)
+#     print(dir)
 
-current_directory = os.getcwd()
-os.chdir(r'C:\Users\restg\Downloads')
-list_dir = os.listdir()
-for dir in list_dir:
-    if dir.endswith('.zip'):
-        os.remove(dir)
-    print(dir)
+# x = 23
+# num = 0 if x > 10 else 11
+# print(num)
+
+# a = ['GSW', 'LAKERS', 'CLIPPERS']
+# b = [1, 2, 3]
+#
+# print(dict(zip(a, b)))
+
+# def reverse_words(text):
+#     # result = []
+#     # for word in text.split(' '):
+#     #     print(word[::-1])
+#     #     # reversed_word = reversed(word)
+#     #     # result.append(reversed_word)
+#     return ' '.join([word[::-1] for word in text.split(' ')])
+#
+# print(reverse_words('This is an example!'))
+
+# def create_phone_number(n):
+#     # str_n = ''
+#     # for i in n:
+#     #     str_n += str(i)
+#     # return f'({str_n[:3]}) {str_n[3:7]}-{str_n[7:10]}'
+#     return '({}{}{}) {}{}{}-{}{}{}{}'.format(*n)
+#
+# print(create_phone_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
+
+# a = 5
+# b = 10
+# a, b = b, a
+#
+# print(a, b)
+
